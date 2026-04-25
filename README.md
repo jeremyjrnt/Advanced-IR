@@ -48,7 +48,6 @@ For each image we keep a single caption (the longest available) as the textual q
 ```
 .
 ├── advance_ir.ipynb     # Single end-to-end Colab notebook
-├── paper.pdf            # Final report
 └── README.md
 ```
 
@@ -86,19 +85,6 @@ Each stage writes its outputs to Drive (FAISS index, `bm25_*.pkl`, `blip_{datase
 | BLIP-2 generation (5 cap + 5 VQA) | ~3 h | ~2 h |
 | BM25 indexing | < 1 min | < 1 min |
 | Hybrid ranking (all fusion methods) | ~10 min | ~10 min |
-
-## Citation
-
-If you use this code or build on the method, please cite:
-
-```bibtex
-@misc{jornet2025mirage,
-  title  = {MIRAGE: Multimodal Image Retrieval via Augmented Generative Enrichment},
-  author = {Jornet, Jeremy and Sasson, Eden},
-  year   = {2025},
-  note   = {Technion -- Israel Institute of Technology, Advanced IR course project}
-}
-```
 
 ## License
 
