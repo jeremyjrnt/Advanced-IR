@@ -67,7 +67,7 @@ The notebook is organized as a linear pipeline:
 
 ## Reproduction
 
-The notebook is designed for **Google Colab with an A100 GPU** and **Google Drive** storage.
+The notebook is designed for **Google Colab with a GPU** and **Google Drive** storage.
 
 1. **Mount Drive** and place datasets under `MyDrive/Advance-ir/{Flickr,VizWiz}/`:
     - Flickr30k images + `results.csv`
@@ -77,14 +77,6 @@ The notebook is designed for **Google Colab with an A100 GPU** and **Google Driv
 
 Each stage writes its outputs to Drive (FAISS index, `bm25_*.pkl`, `blip_{dataset}.json`, `{dataset}_annotations.json`) and is independently re-runnable. Heavy steps (CLIP embedding, BLIP generation) are cached and need to be run only once per dataset.
 
-### Indicative runtimes (A100, 40 GB)
-
-| Stage | Flickr30k | VizWiz |
-|---|---|---|
-| CLIP image embedding | ~3 min | ~2 min |
-| BLIP-2 generation (5 cap + 5 VQA) | ~3 h | ~2 h |
-| BM25 indexing | < 1 min | < 1 min |
-| Hybrid ranking (all fusion methods) | ~10 min | ~10 min |
 
 ## License
 
