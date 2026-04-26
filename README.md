@@ -58,7 +58,7 @@ The notebook is organized as a linear pipeline:
 | 1 | Dataset loading & annotation parsing (Flickr30k, VizWiz) |
 | 2 | Dense indexing — CLIP image embeddings → FAISS |
 | 3 | Sparse indexing — BLIP-2 generation (5 captions + 5 VQA answers per image) → BM25 |
-| 4 | CLIP-only baseline ranking |
+| 4 | CLIP-only baseline ranking + BM25 Only |
 | 5 | Hybrid ranking — RRF, Borda, CombSUM, Weighted ($\alpha=0.7, 0.9$) |
 | 6 | Quantitative analysis — R@K, MRR, mean/median rank, improvement & no-degradation rates, significance tests |
 | 7 | Visualizations — rank distributions (KDE) on a log axis |
