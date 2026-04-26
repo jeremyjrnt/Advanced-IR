@@ -47,7 +47,10 @@ For each image we keep a single caption (the longest available) as the textual q
 
 ```
 .
-├── advance_ir.ipynb     # Single end-to-end Colab notebook
+├── advance_ir.ipynb        # Single end-to-end Colab notebook
+├── notebook/               # Additional notebooks
+├── annotations/            # JSON files with ground-truth + ranks (baseline & fusion methods)
+├── blip_generations/       # JSON files with BLIP-generated documents (Cap & VQA)
 └── README.md
 ```
 
@@ -64,6 +67,14 @@ The notebook is organized as a linear pipeline:
 | 7 | Visualizations — rank distributions (KDE) on a log axis |
 | 8 | Qualitative analysis — improved/degraded queries with visual examples |
 | 9 | *Bonus* — RM3 and WordNet query expansion (not discussed in the report) |
+
+## Resources
+
+- **Annotations** (`annotations/`):  
+  JSON files containing, for each dataset, the rank annotations: the **baseline CLIP ranks** and the **ranks produced by each method** for every image.
+
+- **BLIP Generations** (`blip_generations/`):  
+  JSON files containing the **synthetic textual documents** generated for each image using BLIP-2, including both **MIRAGE-Cap (captions)** and **MIRAGE-VQA (answers)** variants.
 
 ## Reproduction
 
